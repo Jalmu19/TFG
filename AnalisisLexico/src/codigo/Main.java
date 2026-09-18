@@ -4,11 +4,13 @@ import jflex.exceptions.SilentExit;
 
 import java.io.*;
 
+import  jflex.Main.*;
+
 public class Main {
 
     static void main(String[] args) throws SilentExit, IOException {
-        //String[] ruta = {"C:/Users/almud/OneDrive/Documentos/GitHub/TFG/AnalisisLexico/src/codigo/lexer.l"};
-        //jflex.Main.generate(ruta);
+//        String[] ruta = {"C:/Users/almud/OneDrive/Documentos/GitHub/TFG/AnalisisLexico/src/codigo/lexer.l"};
+//        jflex.Main.generate(ruta);
 
         Reader input = new InputStreamReader(new FileInputStream("C:/Users/almud/OneDrive/Documentos/GitHub/TFG/AnalisisLexico/src/input.txt"));
         AnalizadorLexicoTiny al = new AnalizadorLexicoTiny(input);

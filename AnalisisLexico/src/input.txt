@@ -5,7 +5,7 @@ ent y;
 bool b;
 
 x = 13;
-y = 2;
+y = -2;
 
 si (x == y)[
    b = falso;

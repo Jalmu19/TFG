@@ -25,8 +25,9 @@ package codigo
 
 letra  = ([A-Z]|[a-z])
 digitoPositivo = [1-9]
+digitoNegativo = \-({digitoPositivo})
 digito = ({digitoPositivo}|0)
-numeroEntero = {digitoPositivo}{digito}*|0
+numeroEntero = ({digitoPositivo}|{digitoNegativo}){digito}*|0
 separador = [ \t\r\b\n]
 comentario = \#[^\#]*\#
 identificador = {letra}({letra}|{digito})*
