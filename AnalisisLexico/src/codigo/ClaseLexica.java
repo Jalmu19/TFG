@@ -22,4 +22,6 @@ public class ClaseLexica {
   public static final int PUNTOCOMA = 15;
   public static final int LAP = 17;
   public static final int LCIERRE = 18;
+  public static final int MULTI = 19;
+  public static final int DIV = 20;
 }

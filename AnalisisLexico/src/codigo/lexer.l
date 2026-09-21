@@ -33,6 +33,8 @@ comentario = \#[^\#]*\#
 identificador = {letra}({letra}|{digito})*
 operadorSuma = \+
 operadorResta = \-
+operadorMult = \*
+operadorDiv = \/
 operadorIgual = \=
 operadorMayor = \>
 operadorIgualIgual = \=\=
@@ -67,6 +69,8 @@ puntocoma = \;
 {operadorIgual}           {return ops.unidadIgual();}
 {operadorIgualIgual}      {return ops.unidadIgualIgual();}
 {operadorMayor}           {return ops.unidadMayor();}
+{operadorMult}             {return ops.unidadMulti();}
+{operadorDiv}             {return ops.unidadDiv();}
 {parentesisApertura}      {return ops.unidadPAp();}
 {parentesisCierre}        {return ops.unidadPCierre();}
 {corcheteApertura}        {return ops.unidadCAp();}

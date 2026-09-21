@@ -36,6 +36,8 @@ public class ALexOperations {
   public UnidadLexica unidadResta() {
         return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENOS);
     }
+    public UnidadLexica unidadMulti(){return new UnidadLexica(alex.fila(), alex.columna(),ClaseLexica.MULTI);}
+    public UnidadLexica unidadDiv(){return new UnidadLexica(alex.fila(), alex.columna(),ClaseLexica.DIV);}
 
   public UnidadLexica unidadPAp() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.PAP); 
