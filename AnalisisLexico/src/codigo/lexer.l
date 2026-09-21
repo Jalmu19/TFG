@@ -40,7 +40,7 @@ parentesisApertura = \(
 parentesisCierre = \)
 corcheteApertura = \[
 corcheteCierre = \]
-llaveApertura =\{
+llaveApertura = \{
 llaveCierre = \}
 true = True
 false = False
@@ -71,5 +71,7 @@ puntocoma = \;
 {parentesisCierre}        {return ops.unidadPCierre();}
 {corcheteApertura}        {return ops.unidadCAp();}
 {corcheteCierre}          {return ops.unidadCCierre();}
+{llaveApertura}           {return ops.unidadLAp();}
+{llaveCierre}             {return ops.unidadLCierre();}
 {puntocoma}               {return ops.unidadPuntoComa();}
 [^]                       {ops.error();}

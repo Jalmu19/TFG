@@ -68,7 +68,7 @@ class AnalizadorLexicoTiny {
     "\5\14\1\15\15\14\1\16\6\14\1\17\1\0\1\20"+
     "\3\0\1\21\1\22\2\14\1\23\1\24\2\14\1\25"+
     "\2\14\1\26\1\14\1\27\1\30\2\14\1\31\1\32"+
-    "\1\33\1\34\5\14\u0185\0";
+    "\1\33\1\34\5\14\1\35\1\0\1\36\u0182\0";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[512];
@@ -97,11 +97,11 @@ class AnalizadorLexicoTiny {
   private static final String ZZ_ACTION_PACKED_0 =
     "\1\0\1\1\1\2\1\1\1\3\1\4\1\5\1\6"+
     "\2\7\1\10\1\11\1\12\3\13\1\14\1\15\3\13"+
-    "\1\0\1\16\4\13\1\17\5\13\1\20\1\13\1\21"+
-    "\1\13\1\22\1\23\2\13\1\24";
+    "\1\16\1\17\1\0\1\20\4\13\1\21\5\13\1\22"+
+    "\1\13\1\23\1\13\1\24\1\25\2\13\1\26";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[42];
+    int [] result = new int[44];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -126,15 +126,15 @@ class AnalizadorLexicoTiny {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\35\0\35\0\72\0\35\0\35\0\35\0\127"+
-    "\0\35\0\164\0\35\0\221\0\35\0\256\0\313\0\350"+
-    "\0\35\0\35\0\u0105\0\u0122\0\u013f\0\72\0\35\0\u015c"+
-    "\0\u0179\0\u0196\0\u01b3\0\256\0\u01d0\0\u01ed\0\u020a\0\u0227"+
-    "\0\u0244\0\256\0\u0261\0\256\0\u027e\0\256\0\256\0\u029b"+
-    "\0\u02b8\0\256";
+    "\0\0\0\37\0\37\0\76\0\37\0\37\0\37\0\135"+
+    "\0\37\0\174\0\37\0\233\0\37\0\272\0\331\0\370"+
+    "\0\37\0\37\0\u0117\0\u0136\0\u0155\0\37\0\37\0\76"+
+    "\0\37\0\u0174\0\u0193\0\u01b2\0\u01d1\0\272\0\u01f0\0\u020f"+
+    "\0\u022e\0\u024d\0\u026c\0\272\0\u028b\0\272\0\u02aa\0\272"+
+    "\0\272\0\u02c9\0\u02e8\0\272";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[42];
+    int [] result = new int[44];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -159,30 +159,31 @@ class AnalizadorLexicoTiny {
   private static final String ZZ_TRANS_PACKED_0 =
     "\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11"+
     "\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21"+
-    "\1\22\1\16\1\23\1\24\1\16\1\25\7\16\35\0"+
-    "\2\26\1\3\32\26\10\0\1\12\33\0\2\12\36\0"+
-    "\1\27\31\0\2\16\3\0\3\16\2\0\14\16\7\0"+
-    "\2\16\3\0\3\16\2\0\1\30\13\16\7\0\2\16"+
-    "\3\0\3\16\2\0\10\16\1\31\3\16\7\0\2\16"+
-    "\3\0\3\16\2\0\7\16\1\32\4\16\7\0\2\16"+
-    "\3\0\3\16\2\0\5\16\1\33\6\16\7\0\2\16"+
-    "\3\0\3\16\2\0\3\16\1\34\2\16\1\35\5\16"+
-    "\7\0\2\16\3\0\3\16\2\0\5\16\1\36\6\16"+
-    "\7\0\2\16\3\0\3\16\2\0\13\16\1\37\7\0"+
-    "\2\16\3\0\3\16\2\0\7\16\1\40\4\16\7\0"+
-    "\2\16\3\0\3\16\2\0\11\16\1\41\2\16\7\0"+
-    "\2\16\3\0\3\16\2\0\12\16\1\42\1\16\7\0"+
-    "\2\16\3\0\3\16\2\0\11\16\1\43\2\16\7\0"+
-    "\2\16\3\0\3\16\2\0\2\16\1\44\11\16\7\0"+
-    "\2\16\3\0\3\16\2\0\5\16\1\45\6\16\7\0"+
-    "\2\16\3\0\3\16\2\0\2\16\1\46\11\16\7\0"+
-    "\2\16\3\0\3\16\2\0\2\16\1\47\11\16\7\0"+
-    "\2\16\3\0\3\16\2\0\2\16\1\50\11\16\7\0"+
-    "\2\16\3\0\3\16\2\0\1\51\13\16\7\0\2\16"+
-    "\3\0\3\16\2\0\6\16\1\52\5\16";
+    "\1\22\1\16\1\23\1\24\1\16\1\25\7\16\1\26"+
+    "\1\27\37\0\2\30\1\3\34\30\10\0\1\12\35\0"+
+    "\2\12\40\0\1\31\33\0\2\16\3\0\3\16\2\0"+
+    "\14\16\11\0\2\16\3\0\3\16\2\0\1\32\13\16"+
+    "\11\0\2\16\3\0\3\16\2\0\10\16\1\33\3\16"+
+    "\11\0\2\16\3\0\3\16\2\0\7\16\1\34\4\16"+
+    "\11\0\2\16\3\0\3\16\2\0\5\16\1\35\6\16"+
+    "\11\0\2\16\3\0\3\16\2\0\3\16\1\36\2\16"+
+    "\1\37\5\16\11\0\2\16\3\0\3\16\2\0\5\16"+
+    "\1\40\6\16\11\0\2\16\3\0\3\16\2\0\13\16"+
+    "\1\41\11\0\2\16\3\0\3\16\2\0\7\16\1\42"+
+    "\4\16\11\0\2\16\3\0\3\16\2\0\11\16\1\43"+
+    "\2\16\11\0\2\16\3\0\3\16\2\0\12\16\1\44"+
+    "\1\16\11\0\2\16\3\0\3\16\2\0\11\16\1\45"+
+    "\2\16\11\0\2\16\3\0\3\16\2\0\2\16\1\46"+
+    "\11\16\11\0\2\16\3\0\3\16\2\0\5\16\1\47"+
+    "\6\16\11\0\2\16\3\0\3\16\2\0\2\16\1\50"+
+    "\11\16\11\0\2\16\3\0\3\16\2\0\2\16\1\51"+
+    "\11\16\11\0\2\16\3\0\3\16\2\0\2\16\1\52"+
+    "\11\16\11\0\2\16\3\0\3\16\2\0\1\53\13\16"+
+    "\11\0\2\16\3\0\3\16\2\0\6\16\1\54\5\16"+
+    "\2\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[725];
+    int [] result = new int[775];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -226,10 +227,11 @@ class AnalizadorLexicoTiny {
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
     "\1\0\2\11\1\1\3\11\1\1\1\11\1\1\1\11"+
-    "\1\1\1\11\3\1\2\11\3\1\1\0\1\11\23\1";
+    "\1\1\1\11\3\1\2\11\3\1\2\11\1\0\1\11"+
+    "\23\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[42];
+    int [] result = new int[44];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -712,102 +714,112 @@ class AnalizadorLexicoTiny {
             { ops.error();
             }
             // fall through
-          case 21: break;
+          case 23: break;
           case 2:
             { 
             }
             // fall through
-          case 22: break;
+          case 24: break;
           case 3:
             { return ops.unidadPAp();
             }
             // fall through
-          case 23: break;
+          case 25: break;
           case 4:
             { return ops.unidadPCierre();
             }
             // fall through
-          case 24: break;
+          case 26: break;
           case 5:
             { return ops.unidadSuma();
             }
             // fall through
-          case 25: break;
+          case 27: break;
           case 6:
             { return ops.unidadResta();
             }
             // fall through
-          case 26: break;
+          case 28: break;
           case 7:
             { return ops.unidadEnt();
             }
             // fall through
-          case 27: break;
+          case 29: break;
           case 8:
             { return ops.unidadPuntoComa();
             }
             // fall through
-          case 28: break;
+          case 30: break;
           case 9:
             { return ops.unidadIgual();
             }
             // fall through
-          case 29: break;
+          case 31: break;
           case 10:
             { return ops.unidadMayor();
             }
             // fall through
-          case 30: break;
+          case 32: break;
           case 11:
             { return ops.unidadId();
             }
             // fall through
-          case 31: break;
+          case 33: break;
           case 12:
             { return ops.unidadCAp();
             }
             // fall through
-          case 32: break;
+          case 34: break;
           case 13:
             { return ops.unidadCCierre();
             }
             // fall through
-          case 33: break;
-          case 14:
-            { return ops.unidadIgualIgual();
-            }
-            // fall through
-          case 34: break;
-          case 15:
-            { return ops.unidadIf();
-            }
-            // fall through
           case 35: break;
-          case 16:
-            { return ops.unidadTipoEnt();
+          case 14:
+            { return ops.unidadLAp();
             }
             // fall through
           case 36: break;
-          case 17:
-            { return ops.unidadTrue();
+          case 15:
+            { return ops.unidadLCierre();
             }
             // fall through
           case 37: break;
-          case 18:
-            { return ops.unidadElse();
+          case 16:
+            { return ops.unidadIgualIgual();
             }
             // fall through
           case 38: break;
-          case 19:
-            { return ops.unidadFalse();
+          case 17:
+            { return ops.unidadIf();
             }
             // fall through
           case 39: break;
-          case 20:
-            { return ops.unidadTipoBool();
+          case 18:
+            { return ops.unidadTipoEnt();
             }
             // fall through
           case 40: break;
+          case 19:
+            { return ops.unidadTrue();
+            }
+            // fall through
+          case 41: break;
+          case 20:
+            { return ops.unidadElse();
+            }
+            // fall through
+          case 42: break;
+          case 21:
+            { return ops.unidadFalse();
+            }
+            // fall through
+          case 43: break;
+          case 22:
+            { return ops.unidadTipoBool();
+            }
+            // fall through
+          case 44: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

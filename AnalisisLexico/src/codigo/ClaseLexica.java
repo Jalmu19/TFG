@@ -20,4 +20,6 @@ public class ClaseLexica {
   public static final int CAP = 13;
   public static final int CCIERRE = 14;
   public static final int PUNTOCOMA = 15;
+  public static final int LAP = 17;
+  public static final int LCIERRE = 18;
 }

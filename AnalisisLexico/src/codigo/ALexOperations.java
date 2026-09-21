@@ -17,9 +17,7 @@ public class ALexOperations {
   public UnidadLexica unidadElse() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.ELSE); 
   }
-  public UnidadLexica unidadEnt() {
-     return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.ENT,alex.lexema()); 
-  } 
+  public UnidadLexica unidadEnt() { return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.ENT,alex.lexema());}
   public UnidadLexica unidadTipoEnt() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_ENT); 
   }
@@ -38,6 +36,7 @@ public class ALexOperations {
   public UnidadLexica unidadResta() {
         return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENOS);
     }
+
   public UnidadLexica unidadPAp() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.PAP); 
   } 
@@ -49,7 +48,10 @@ public class ALexOperations {
   } 
   public UnidadLexica unidadCCierre() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.CCIERRE); 
-  }  
+  }
+  public UnidadLexica unidadLAp() { return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.LAP);}
+  public UnidadLexica unidadLCierre() { return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.LCIERRE);}
+
   public UnidadLexica unidadIgual() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.IGUAL); 
   } 
