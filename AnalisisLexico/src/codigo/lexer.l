@@ -32,6 +32,7 @@ separador = [ \t\r\b\n]
 comentario = \#[^\#]*\#
 identificador = {letra}({letra}|{digito})*
 operadorSuma = \+
+operadorResta = \-
 operadorIgual = \=
 operadorMayor = \>
 operadorIgualIgual = \=\=
@@ -39,12 +40,14 @@ parentesisApertura = \(
 parentesisCierre = \)
 corcheteApertura = \[
 corcheteCierre = \]
-true = verdadero
-false = falso
-if = si
-else = sino
-int = ent
-bool = bool
+llaveApertura =\{
+llaveCierre = \}
+true = True
+false = False
+if = if
+else = else
+int = int
+bool = boolean
 puntocoma = \;
 
 
@@ -60,6 +63,7 @@ puntocoma = \;
 {identificador}           {return ops.unidadId();}
 {numeroEntero}            {return ops.unidadEnt();}
 {operadorSuma}            {return ops.unidadSuma();}
+{operadorResta}           {return ops.unidadResta();}
 {operadorIgual}           {return ops.unidadIgual();}
 {operadorIgualIgual}      {return ops.unidadIgualIgual();}
 {operadorMayor}           {return ops.unidadMayor();}

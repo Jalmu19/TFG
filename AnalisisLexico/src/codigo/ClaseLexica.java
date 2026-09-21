@@ -11,6 +11,7 @@ public class ClaseLexica {
   public static final int FALSE = 16;
   public static final int TIPO_BOOL = 8;
   public static final int MAS = 9;
+  public static final int MENOS = 16;
   public static final int IGUAL = 10;
   public static final int IGUALIGUAL = 11;
   public static final int MAYOR = 10;

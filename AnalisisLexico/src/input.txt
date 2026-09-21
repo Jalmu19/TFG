@@ -1,15 +1,17 @@
 # Este es un ejemplo #
 
-ent x;
-ent y;
+int x;
+int y;
 bool b;
 
 x = 13;
 y = -2;
 
-si (x == y)[
-   b = falso;
-] sino [
+if {x == y}[
+   b = False;
+] else [
    b = x == y + 2;
+   int c;
+   c = x - y;
 ]
 

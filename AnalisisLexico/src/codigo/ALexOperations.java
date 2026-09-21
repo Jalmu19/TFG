@@ -34,7 +34,10 @@ public class ALexOperations {
   }
   public UnidadLexica unidadSuma() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MAS); 
-  } 
+  }
+  public UnidadLexica unidadResta() {
+        return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENOS);
+    }
   public UnidadLexica unidadPAp() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.PAP); 
   } 
