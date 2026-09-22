@@ -40,7 +40,12 @@ operadorMult = \*
 operadorDiv = \/
 operadorIgual = \=
 operadorMayor = \>
+operadorMenor = \<
+operadorMayorIgual = \>\=
+operadorMenorIgual = \<\=
 operadorIgualIgual = \=\=
+operadorPlusPlus = \+\+
+operadorMenosMenos = \-\-
 parentesisApertura = \(
 parentesisCierre = \)
 corcheteApertura = \[
@@ -51,6 +56,9 @@ true = True
 false = False
 if = if
 else = else
+elif = elif
+for = for
+while = while
 int = int
 bool = boolean
 puntocoma = \;
@@ -61,6 +69,9 @@ puntocoma = \;
 {comentario}              {}
 {if}                      {return ops.unidadIf();}
 {else}                    {return ops.unidadElse();}
+{elif}                    {return ops.unidadElif();}
+{for}                     {return ops.unidadFor();}
+{while}                   {return ops.unidadWhile();}
 {int}                     {return ops.unidadTipoEnt();}
 {bool}                    {return ops.unidadTipoBool();}
 {false}                   {return ops.unidadFalse();}
@@ -71,8 +82,13 @@ puntocoma = \;
 {operadorResta}           {return ops.unidadResta();}
 {operadorIgual}           {return ops.unidadIgual();}
 {operadorIgualIgual}      {return ops.unidadIgualIgual();}
+{operadorPlusPlus}        {return ops.unidadPlusPlus();}
+{operadorMenosMenos}      {return ops.unidadMenosMenos();}
 {operadorMayor}           {return ops.unidadMayor();}
-{operadorMult}             {return ops.unidadMulti();}
+{operadorMenor}           {return ops.unidadMenor();}
+{operadorMayorIgual}      {return ops.unidadMayorIgual();}
+{operadorMenorIgual}      {return ops.unidadMenorIgual();}
+{operadorMult}            {return ops.unidadMulti();}
 {operadorDiv}             {return ops.unidadDiv();}
 {parentesisApertura}      {return ops.unidadPAp();}
 {parentesisCierre}        {return ops.unidadPCierre();}

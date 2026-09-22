@@ -17,6 +17,10 @@ public class ALexOperations {
   public UnidadLexica unidadElse() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.ELSE); 
   }
+  public UnidadLexica unidadElif(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.ELIF);}
+  public UnidadLexica unidadFor(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.FOR);}
+  public UnidadLexica unidadWhile(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.WHILE);}
+
   public UnidadLexica unidadEnt() { return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.ENT,alex.lexema());}
   public UnidadLexica unidadTipoEnt() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_ENT); 
@@ -24,20 +28,22 @@ public class ALexOperations {
   public UnidadLexica unidadTipoBool() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_BOOL); 
   }
+
   public UnidadLexica unidadTrue() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TRUE); 
   }
   public UnidadLexica unidadFalse() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.FALSE); 
   }
+
   public UnidadLexica unidadSuma() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MAS); 
   }
   public UnidadLexica unidadResta() {
         return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENOS);
     }
-    public UnidadLexica unidadMulti(){return new UnidadLexica(alex.fila(), alex.columna(),ClaseLexica.MULTI);}
-    public UnidadLexica unidadDiv(){return new UnidadLexica(alex.fila(), alex.columna(),ClaseLexica.DIV);}
+  public UnidadLexica unidadMulti(){return new UnidadLexica(alex.fila(), alex.columna(),ClaseLexica.MULTI);}
+  public UnidadLexica unidadDiv(){return new UnidadLexica(alex.fila(), alex.columna(),ClaseLexica.DIV);}
 
   public UnidadLexica unidadPAp() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.PAP); 
@@ -60,6 +66,11 @@ public class ALexOperations {
   public UnidadLexica unidadIgualIgual() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.IGUALIGUAL); 
   }
+  public UnidadLexica unidadPlusPlus(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.PLUSPLUS);}
+  public UnidadLexica unidadMenosMenos(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENOSMENOS);}
+  public UnidadLexica unidadMenor(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENOR);}
+  public UnidadLexica unidadMayorIgual(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MAYORI);}
+  public UnidadLexica unidadMenorIgual(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENORI);}
   public UnidadLexica unidadMayor() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MAYOR); 
   }

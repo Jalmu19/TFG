@@ -24,4 +24,12 @@ public class ClaseLexica {
   public static final int LCIERRE = 18;
   public static final int MULTI = 19;
   public static final int DIV = 20;
+  public static final int FOR = 21;
+  public static final int WHILE = 22;
+  public static final int ELIF = 23;
+  public static final int PLUSPLUS = 24;
+  public static final int MENOSMENOS = 25;
+  public static final int MAYORI = 26;
+  public static final int MENORI = 27;
+  public static final int MENOR = 28;
 }
