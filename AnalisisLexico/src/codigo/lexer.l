@@ -45,6 +45,7 @@ operadorMenor = \<
 operadorMayorIgual = \>\=
 operadorMenorIgual = \<\=
 operadorIgualIgual = \=\=
+operadorDistinto = \!\=
 operadorPlusPlus = \+\+
 operadorMenosMenos = \-\-
 parentesisApertura = \(
@@ -83,6 +84,7 @@ puntocoma = \;
 {operadorResta}           {return ops.unidadResta();}
 {operadorIgual}           {return ops.unidadIgual();}
 {operadorIgualIgual}      {return ops.unidadIgualIgual();}
+{operadorDistinto}        {return ops.unidadDistinto();}
 {operadorPlusPlus}        {return ops.unidadPlusPlus();}
 {operadorMenosMenos}      {return ops.unidadMenosMenos();}
 {operadorMayor}           {return ops.unidadMayor();}

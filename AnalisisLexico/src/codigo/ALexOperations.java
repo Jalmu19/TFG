@@ -66,6 +66,7 @@ public class ALexOperations {
   public UnidadLexica unidadIgualIgual() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.IGUALIGUAL); 
   }
+  public UnidadLexica unidadDistinto(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.DISTINTO);}
   public UnidadLexica unidadPlusPlus(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.PLUSPLUS);}
   public UnidadLexica unidadMenosMenos(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENOSMENOS);}
   public UnidadLexica unidadMenor(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MENOR);}

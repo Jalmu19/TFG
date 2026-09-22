@@ -32,4 +32,5 @@ public class ClaseLexica {
   public static final int MAYORI = 26;
   public static final int MENORI = 27;
   public static final int MENOR = 28;
+  public static final int DISTINTO = 29;
 }
