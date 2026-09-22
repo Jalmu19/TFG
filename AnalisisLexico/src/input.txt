@@ -5,7 +5,7 @@
 jskjkdkkkjdkjfkdsjf
 */
 
-int x;
+int x_l;
 int y;
 bool b;
 
