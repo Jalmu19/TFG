@@ -1,4 +1,10 @@
-# Este es un ejemplo #
+# Este es un ejemplo
+//patata
+
+/* jdjdjdjdjdjdncjdnjcn
+jskjkdkkkjdkjfkdsjf
+
+*/
 
 int x;
 int y;
@@ -11,9 +17,5 @@ if {x == y}[
    b = False;
 ] else [
    b = x == y + 2;
-   int c;
-   c = x - y;
-   c = x * y
-   c = x / y
 ]
 
