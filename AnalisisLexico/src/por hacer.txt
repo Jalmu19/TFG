@@ -1,0 +1,2 @@
+Añadir coma
+Añadir return, public, private, tipos de datos(floats, void¿?)
