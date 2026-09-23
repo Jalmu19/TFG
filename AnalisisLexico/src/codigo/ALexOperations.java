@@ -21,16 +21,18 @@ public class ALexOperations {
   public UnidadLexica unidadFor(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.FOR);}
   public UnidadLexica unidadWhile(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.WHILE);}
   public UnidadLexica unidadFunct(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.FUNC,alex.lexema());}
+  public UnidadLexica unidadRet(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.RET,alex.lexema());}
 
   public UnidadLexica unidadEnt() { return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.ENT,alex.lexema());}
   public UnidadLexica unidadFloat(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.FLOAT);}
 
-  public UnidadLexica unidadTipoEnt() {
-     return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_ENT); 
-  }
-  public UnidadLexica unidadTipoBool() {
-     return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_BOOL); 
-  }
+  public UnidadLexica unidadPriv(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.PRIV); }
+  public UnidadLexica unidadPub(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.PUB); }
+  public UnidadLexica unidadProt(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.PROT); }
+  public UnidadLexica unidadClass(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.CLASS); }
+
+    public UnidadLexica unidadTipoEnt() {return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_ENT);}
+  public UnidadLexica unidadTipoBool() { return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_BOOL);}
   public UnidadLexica unidadTipoFloat(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_FLOAT);}
 
   public UnidadLexica unidadTrue() {

@@ -66,6 +66,11 @@ int = int
 float = float
 bool = boolean
 function = func
+return = return
+private = priv
+public = pub
+protected = prot
+class = class
 puntocoma = \;
 
 
@@ -83,6 +88,11 @@ puntocoma = \;
 {bool}                    {return ops.unidadTipoBool();}
 {false}                   {return ops.unidadFalse();}
 {true}                    {return ops.unidadTrue();}
+{return}                  {return ops.unidadRet();}
+{class}                   {return ops.unidadClass();}
+{private}                 {return ops.unidadPriv();}
+{public}                  {return ops.unidadPub();}
+{protected}               {return ops.unidadProt();}
 {identificador}           {return ops.unidadId();}
 {numeroEntero}            {return ops.unidadEnt();}
 {numeroReal}              {return ops.unidadFloat();}

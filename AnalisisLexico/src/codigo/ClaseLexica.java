@@ -36,4 +36,9 @@ public class ClaseLexica {
   public static final int FUNC = 30;
   public static final int FLOAT = 31;
   public static final int TIPO_FLOAT = 32;
+  public static final int RET = 33;
+  public static final int PRIV = 34;
+  public static final int PROT = 35;
+  public static final int PUB = 36;
+  public static final int CLASS = 37;
 }
