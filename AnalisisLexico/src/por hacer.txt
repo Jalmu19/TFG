@@ -1,1 +1,1 @@
-Añadir return, public, private, tipos de datos(void¿?)
+Mas tipos de datos¿?
