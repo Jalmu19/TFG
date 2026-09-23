@@ -28,7 +28,8 @@ digitoPositivo = [1-9]
 digitoNegativo = \-({digitoPositivo})
 digito = ({digitoPositivo}|0)
 numeroEntero = ({digitoPositivo}|{digitoNegativo}){digito}*|0
-separador = [ \t\r\b\n]
+numeroReal = ({numeroEntero})\.({numeroEntero})+
+separador = [ \t\r\b\n\,]
 comentarioBarras = \/\/[^\r\n]*
 comentarioAlm = \#[^\#\n\r]*
 comentarioMultLinea =\/\*[^]*\*\/
@@ -62,6 +63,7 @@ elif = elif
 for = for
 while = while
 int = int
+float = float
 bool = boolean
 function = func
 puntocoma = \;
@@ -77,11 +79,13 @@ puntocoma = \;
 {while}                   {return ops.unidadWhile();}
 {function}                {return ops.unidadFunct();}
 {int}                     {return ops.unidadTipoEnt();}
+{float}                   {return ops.unidadTipoFloat();}
 {bool}                    {return ops.unidadTipoBool();}
 {false}                   {return ops.unidadFalse();}
 {true}                    {return ops.unidadTrue();}
 {identificador}           {return ops.unidadId();}
 {numeroEntero}            {return ops.unidadEnt();}
+{numeroReal}              {return ops.unidadFloat();}
 {operadorSuma}            {return ops.unidadSuma();}
 {operadorResta}           {return ops.unidadResta();}
 {operadorIgual}           {return ops.unidadIgual();}

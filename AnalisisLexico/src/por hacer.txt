@@ -1,2 +1,1 @@
-Añadir coma
-Añadir return, public, private, tipos de datos(floats,double, void¿?), la coma,
+Añadir return, public, private, tipos de datos(void¿?)

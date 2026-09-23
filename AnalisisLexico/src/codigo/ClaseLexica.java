@@ -34,4 +34,6 @@ public class ClaseLexica {
   public static final int MENOR = 28;
   public static final int DISTINTO = 29;
   public static final int FUNC = 30;
+  public static final int FLOAT = 31;
+  public static final int TIPO_FLOAT = 32;
 }

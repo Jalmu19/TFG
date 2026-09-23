@@ -23,12 +23,15 @@ public class ALexOperations {
   public UnidadLexica unidadFunct(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.FUNC,alex.lexema());}
 
   public UnidadLexica unidadEnt() { return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.ENT,alex.lexema());}
+  public UnidadLexica unidadFloat(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.FLOAT);}
+
   public UnidadLexica unidadTipoEnt() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_ENT); 
   }
   public UnidadLexica unidadTipoBool() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_BOOL); 
   }
+  public UnidadLexica unidadTipoFloat(){return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TIPO_FLOAT);}
 
   public UnidadLexica unidadTrue() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.TRUE); 

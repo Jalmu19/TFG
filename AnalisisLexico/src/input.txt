@@ -18,7 +18,5 @@ if {x == y}[
    b = x == y + 2;
 ]
 
-func sumar (int x){
-    return x;
-}
+float f = -123.456;
 
