@@ -10,7 +10,7 @@ int y;
 bool b;
 
 x = 13;
-y = -2;
+y = -3;
 
 if {x == y}[
    b = False;
@@ -18,5 +18,7 @@ if {x == y}[
    b = x == y + 2;
 ]
 
-x != y
+func sumar (int x){
+    return x;
+}
 

@@ -63,6 +63,7 @@ for = for
 while = while
 int = int
 bool = boolean
+function = func
 puntocoma = \;
 
 
@@ -74,6 +75,7 @@ puntocoma = \;
 {elif}                    {return ops.unidadElif();}
 {for}                     {return ops.unidadFor();}
 {while}                   {return ops.unidadWhile();}
+{function}                {return ops.unidadFunct();}
 {int}                     {return ops.unidadTipoEnt();}
 {bool}                    {return ops.unidadTipoBool();}
 {false}                   {return ops.unidadFalse();}

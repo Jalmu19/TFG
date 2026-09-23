@@ -20,6 +20,7 @@ public class ALexOperations {
   public UnidadLexica unidadElif(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.ELIF);}
   public UnidadLexica unidadFor(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.FOR);}
   public UnidadLexica unidadWhile(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.WHILE);}
+  public UnidadLexica unidadFunct(){return new UnidadLexica(alex.fila(), alex.columna(), ClaseLexica.FUNC,alex.lexema());}
 
   public UnidadLexica unidadEnt() { return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.ENT,alex.lexema());}
   public UnidadLexica unidadTipoEnt() {
