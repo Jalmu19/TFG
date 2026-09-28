@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="jflex">
     <CLASSES>
-      <root url="jar://$USER_HOME$/_Galaxy_Al/_UCM/4º Carrera/_TFG/Apuntes/Practicas/Práctica Análisis Léxico/jflex.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../_Librerias/jflex.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
