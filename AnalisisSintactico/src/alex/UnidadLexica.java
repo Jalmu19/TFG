@@ -1,4 +1,4 @@
-package AnalizadorSintacticoCUP.alex;
+package alex;
 
 import java_cup.runtime.Symbol;
 

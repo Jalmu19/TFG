@@ -1,6 +1,6 @@
-package AnalizadorSintacticoCUP.asint;
+package asint;
 
-import AnalizadorSintacticoCUP.alex.AnalizadorLexicoTiny;
+import alex.AnalizadorLexicoTiny;
 
 import java.io.FileInputStream;
 import java.io.InputStreamReader;

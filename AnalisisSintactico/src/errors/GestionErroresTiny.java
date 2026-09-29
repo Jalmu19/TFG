@@ -1,6 +1,6 @@
-package AnalizadorSintacticoCUP.errors;
+package errors;
 
-import AnalizadorSintacticoCUP.alex.UnidadLexica;
+import alex.UnidadLexica;
 
 public class GestionErroresTiny {
    public void errorLexico(int fila, int columna, String lexema) {

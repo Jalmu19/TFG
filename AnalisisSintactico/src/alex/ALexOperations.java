@@ -1,4 +1,4 @@
-package AnalizadorSintacticoCUP.alex;
+package alex;
 
 public class ALexOperations {
   private AnalizadorLexicoTiny alex;
