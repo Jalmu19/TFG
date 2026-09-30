@@ -8,6 +8,7 @@ jskjkdkkkjdkjfkdsjf
 int x_l;
 int y;
 bool b;
+3.00009
 
 x = 13;
 y = -3;

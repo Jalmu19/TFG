@@ -12,10 +12,11 @@ import  jflex.Main.*;
 public class Main {
 
     static void main(String[] args) throws SilentExit, IOException {
-//        String[] ruta = {"C:/Users/almud/OneDrive/Documentos/GitHub/TFG/AnalisisLexico/src/codigo/lexer.l"};
+//        Ruta del fichero pasarla como argumentos del Main -> edit configuration-arguments
+//        String[] ruta = {"src/codigo/lexer.l"};
 //        jflex.Main.generate(ruta);
 
-        prueba("C:/Users/almud/OneDrive/Documentos/GitHub/TFG/AnalisisLexico/src/input.txt");
+        prueba(args[0]);
     }
 
     public static void prueba(String ruta) throws IOException {
