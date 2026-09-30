@@ -3,11 +3,12 @@
 // source: lexer.l
 
 package alex;
+import errors.GestionErroresTiny;
 
 
 // See https://github.com/jflex-de/jflex/issues/222
 @SuppressWarnings("FallThrough")
-class AnalizadorLexicoTiny {
+public class AnalizadorLexicoTiny implements java_cup.runtime.Scanner {
 
   /** This character denotes the end of file. */
   public static final int YYEOF = -1;
@@ -348,6 +349,7 @@ class AnalizadorLexicoTiny {
   private int yycolumn;
 
   /** Number of characters up to the start of the matched text. */
+  @SuppressWarnings("unused")
   private long yychar;
 
   /** Whether the scanner is currently at the beginning of a line. */
@@ -355,14 +357,17 @@ class AnalizadorLexicoTiny {
   private boolean zzAtBOL = true;
 
   /** Whether the user-EOF-code has already been executed. */
-  @SuppressWarnings("unused")
   private boolean zzEOFDone;
 
   /* user code: */
   private ALexOperations ops;
-  public String lexema() {return yytext();}
-  public int fila() {return yyline+1;}
-  public int columna() {return yycolumn+1;}
+    private GestionErroresTiny errores;
+    public String lexema() {return yytext();}
+    public int fila() {return yyline+1;}
+    public int columna() {return yycolumn+1;}
+    public void fijaGestionErrores(GestionErroresTiny errores) {
+     this.errores = errores;
+    }
 
 
   /**
@@ -370,7 +375,7 @@ class AnalizadorLexicoTiny {
    *
    * @param   in  the java.io.Reader to read input from.
    */
-  AnalizadorLexicoTiny(java.io.Reader in) {
+  public AnalizadorLexicoTiny(java.io.Reader in) {
     ops = new ALexOperations(this);
     this.zzReader = in;
   }
@@ -609,6 +614,18 @@ class AnalizadorLexicoTiny {
   }
 
 
+  /**
+   * Contains user EOF-code, which will be executed exactly once,
+   * when the end of file is reached
+   */
+  private void zzDoEOF() throws java.io.IOException {
+    if (!zzEOFDone) {
+      zzEOFDone = true;
+    
+  yyclose();    }
+  }
+
+
 
 
   /**
@@ -618,7 +635,7 @@ class AnalizadorLexicoTiny {
    * @return the next token.
    * @exception java.io.IOException if any I/O-Error occurs.
    */
-  public UnidadLexica yylex() throws java.io.IOException {
+  @Override  public java_cup.runtime.Symbol next_token() throws java.io.IOException {
     int zzInput;
     int zzAction;
 
@@ -634,8 +651,6 @@ class AnalizadorLexicoTiny {
 
     while (true) {
       zzMarkedPosL = zzMarkedPos;
-
-      yychar+= zzMarkedPosL-zzStartRead;
 
       boolean zzR = false;
       int zzCh;
@@ -756,6 +771,7 @@ class AnalizadorLexicoTiny {
 
       if (zzInput == YYEOF && zzStartRead == zzCurrentPos) {
         zzAtEOF = true;
+            zzDoEOF();
           {   return ops.unidadEof();
  }
       }
