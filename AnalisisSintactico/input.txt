@@ -1,15 +1,53 @@
 # Este es un ejemplo #
 
-ent x;
-ent y;
-bool b;
+int x;
+int y;
+boolean b;
 
 x = 13;
 y = 2;
 
-si (x == y)[
+/*If normal*/
+if (x == y){
    b = falso;
-] sino [
-   b = x == y + 2;
-]
+}
+/*If else*/
+if (x == y){
+   b = falso;
+}
+else{
+    b = 3;
+}
+/*If con else if*/
+if (x == y){
+   b = falso;
+}
+elif (x == 2){
+    x = False;
+}
+else{
+    y = 45;
+}
+
+/*If con else if sin else*/
+if (x == y){
+   b = falso;
+}
+elif (x == 2){
+    x = False;
+}
+
+/*If con 2 else if*/
+if (x == y){
+   b = falso;
+}
+elif (x == 2){
+    x = False;
+}
+elif (x == 2){
+    x = False;
+}
+else{
+    y = 45;
+}
 
