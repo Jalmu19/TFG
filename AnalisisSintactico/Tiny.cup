@@ -35,10 +35,10 @@ non terminal  P, LInst, Inst, Cond, ElseCase, ElifCase, Asig, Decl, DeclVal , Bu
 
 P       ::= LInst;
 LInst   ::= Inst LInst | ;
-Inst    ::= Cond | Asig | Decl | Bucle | Funcion | DeclVal | Op1;
+Inst    ::= Cond | Asig | Decl | Bucle | Funcion | DeclVal PUNTOCOMA| Op1;
 Asig    ::= IDEN IGUAL E0 PUNTOCOMA;
 Decl    ::= TIPO_ENT IDEN PUNTOCOMA | TIPO_BOOL IDEN PUNTOCOMA;
-DeclVal ::= TIPO_ENT IDEN IGUAL E0 PUNTOCOMA | TIPO_FLOAT IDEN IGUAL E0 PUNTOCOMA | TIPO_BOOL IDEN IGUAL E0 PUNTOCOMA ;
+DeclVal ::= TIPO_ENT IDEN IGUAL E0 | TIPO_FLOAT IDEN IGUAL E0 | TIPO_BOOL IDEN IGUAL E0 ;
 Cond        ::= IF PAP E0 PCIERRE LAP LInst LCIERRE ElifCase ElseCase;
 Op1 ::= IDEN PLUSPLUS | IDEN MENOSMENOS;
 Bucle ::= FOR PAP DeclVal PUNTOCOMA E0 PUNTOCOMA Op1 PCIERRE LAP LInst LCIERRE | WHILE PAP E0 PCIERRE CAP LInst CCIERRE ;
