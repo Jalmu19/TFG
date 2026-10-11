@@ -8,8 +8,9 @@ x = 13;
 y = 2;
 int y = x + 1;
 
-func float pepe(int n){
+func float pepe(){
     n++;
+    return;
 }
 
 for(int i = 0; i == 0; i+2){
