@@ -8,10 +8,18 @@ x = 13;
 y = 2;
 int y = x + 1;
 
-for(int i = 0; i == 0; i++){
+func float pepe(int n){
+    n++;
+}
+
+for(int i = 0; i == 0; i+2){
     b = i;
 }
 
+while(x == 3){
+    x--;
+    x + 2 == 456;
+}
 
 /*If normal*/
 if (x == y){
