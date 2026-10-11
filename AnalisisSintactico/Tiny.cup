@@ -37,7 +37,7 @@ P       ::= LInst;
 LInst   ::= Inst LInst | ;
 Inst    ::= Cond | Asig | Decl PUNTOCOMA | Bucle | Function | DeclVal PUNTOCOMA| Op1 PUNTOCOMA;
 Asig    ::= IDEN IGUAL E0 PUNTOCOMA;
-Decl    ::= TIPO_ENT IDEN | TIPO_BOOL IDEN;
+Decl    ::= TIPO_ENT IDEN | TIPO_BOOL IDEN | TIPO_FLOAT IDEN;
 DeclVal ::= TIPO_ENT IDEN IGUAL E0 | TIPO_FLOAT IDEN IGUAL E0 | TIPO_BOOL IDEN IGUAL E0 ;
 Cond        ::= IF PAP E0 PCIERRE LAP LInst LCIERRE ElifCase ElseCase;
 Op1 ::= IDEN PLUSPLUS | IDEN MENOSMENOS | E0;
@@ -46,11 +46,11 @@ ElseCase    ::= ELSE LAP LInst LCIERRE | ;
 ElifCase ::= ELIF PAP E0 PCIERRE LAP LInst LCIERRE ElifCase | ;
 Function ::= FUNC Types IDEN PAP LParameters PCIERRE LAP LInst Retorno LCIERRE;
 Types ::= TIPO_ENT | TIPO_BOOL | TIPO_FLOAT;
-Retorno ::= RET IDEN PUNTOCOMA | RET PUNTOCOMA;
+Retorno ::= RET IDEN | RET | RET E0  PUNTOCOMA;
 LParameters ::= Decl LParameters | ;
 E0  ::= E0 MAS E1  | E1 ;
 E1  ::= E1 MAYOR E2  | E2 ;
 E2  ::= E2 IGUALIGUAL E3 | E3 ;
-E3  ::= ENT  | TRUE  | FALSE | IDEN  | PAP E0 PCIERRE ;  
+E3  ::= ENT  | TRUE  | FALSE | IDEN  | PAP E0 PCIERRE | FLOAT ;
 
 
