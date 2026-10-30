@@ -76,6 +76,7 @@ public = pub
 protected = prot
 class = class
 puntocoma = \;
+coma = \,
 
 
 %%
@@ -120,4 +121,5 @@ puntocoma = \;
 {llaveApertura}           {return ops.unidadLAp();}
 {llaveCierre}             {return ops.unidadLCierre();}
 {puntocoma}               {return ops.unidadPuntoComa();}
+{coma}                    {return ops.unidadComa();}
 [^]                       {ops.error();}

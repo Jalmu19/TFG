@@ -9,7 +9,7 @@ import java.io.Reader;
 public class Main {
     static void main(String[] args) throws Exception {
 
-        //java -cp jflex.jar jflex.Main mini_lexico.l
+        //java -cp jflex.jar jflex.Main lexer.l
         //mover a alex/
         //java -cp cup.jar java_cup.Main -parser AnalizadorSintacticoTiny -symbols ClaseLexica -nopositions Tiny.cup
         //mover a asint/

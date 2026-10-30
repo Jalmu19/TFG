@@ -9,18 +9,17 @@ y = 2;
 int y = x + 1;
 float e = 3.90000004;
 
-func float pepe(){
+func float pepe(int r,){
     n = 3.7;
-    return 3.7;
+    return d ;
 }
 
-for(int i = 0; i == 0; i+2){
+for(int i = 0; i == 0; i++){
     b = i;
 }
 
 while(x == 3){
     x--;
-    x + 2 == 456;
 }
 
 /*If normal*/
