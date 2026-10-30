@@ -30,7 +30,7 @@ terminal IDEN,
          PAP, PCIERRE, CAP, CCIERRE, LAP, LCIERRE;
 
 
-non terminal  P, LInst, Inst, Cond, ElseCase, ElifCase, Asig, Decl, DeclVal , Bucle , Function, Types, LParameters, LParamInit, Retorno, Op1, Increment, E0, E1, E2, E3;
+non terminal  P, LInst, Inst, Cond, ElseCase, ElifCase, Asig, Decl, DeclVal , Bucle , Function, Types, LParameters, Parametros, Retorno, Op1, Increment, E0, E1, E2, E3;
 
 
 P       ::= LInst;
@@ -45,10 +45,11 @@ Bucle ::= FOR PAP DeclVal PUNTOCOMA E0 PUNTOCOMA Increment PCIERRE LAP LInst LCI
 Increment ::= Op1 | E0;
 ElseCase    ::= ELSE LAP LInst LCIERRE | ;
 ElifCase ::= ELIF PAP E0 PCIERRE LAP LInst LCIERRE ElifCase | ;
-Function ::= FUNC Types IDEN PAP LParameters PCIERRE LAP LInst LCIERRE;
+Function ::= FUNC Types IDEN PAP Parametros PCIERRE LAP LInst LCIERRE;
 Types ::= TIPO_ENT | TIPO_BOOL | TIPO_FLOAT;
 Retorno ::= RET E0 | ;
-LParameters ::= Decl COMA LParameters | ;
+Parametros ::= Decl LParameters | ;
+LParameters ::= COMA Decl LParameters | ;
 E0  ::= E0 MAS E1  | E1 ;
 E1  ::= E1 MAYOR E2  | E2 ;
 E2  ::= E2 IGUALIGUAL E3 | E3 ;

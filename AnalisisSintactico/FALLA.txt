@@ -1,5 +1,4 @@
 Falta: menos, multi y div (operaciones), distunto, menor, mayorI, menorI (opBooleanas)
     priv, pub, proct, class(de momento no meterlos)
-    Que la funcion tenga parametros separados por comas
 
-Falla: return vacio, lista parametros con mas de 1 parametro, parametros de funciones
+Falla: return vacio

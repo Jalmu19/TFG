@@ -9,7 +9,7 @@ y = 2;
 int y = x + 1;
 float e = 3.90000004;
 
-func float pepe(int r,){
+func float pepe(float e){
     n = 3.7;
     return d ;
 }
