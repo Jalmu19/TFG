@@ -83,9 +83,12 @@ public class ALexOperations {
   public UnidadLexica unidadMayor() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.MAYOR); 
   }
+  public UnidadLexica unidadComa() {
+     return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.COMA);
+  }
   public UnidadLexica unidadPuntoComa() {
-     return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.PUNTOCOMA); 
-  } 
+        return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.PUNTOCOMA);
+    }
   public UnidadLexica unidadEof() {
      return new UnidadLexica(alex.fila(),alex.columna(),ClaseLexica.EOF); 
   }

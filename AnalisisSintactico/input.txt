@@ -14,13 +14,12 @@ func float pepe(){
     return 3.7;
 }
 
-for(int i = 0; i == 0; i+2){
+for(int i = 0; i == 0; i+7){
     b = i;
 }
 
 while(x == 3){
     x--;
-    x + 2 == 456;
 }
 
 /*If normal*/
