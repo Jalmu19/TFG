@@ -1,4 +1,1 @@
-Falta: menos, multi y div (operaciones), distunto, menor, mayorI, menorI (opBooleanas)
-    priv, pub, proct, class(de momento no meterlos)
-
-Falla:
+Falta:priv, pub, proct, class(de momento no meterlos)
