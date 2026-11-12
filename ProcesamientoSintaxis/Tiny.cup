@@ -1,17 +1,11 @@
-package constructorast;
+package asint;
 
 import java_cup.runtime.*;
 import alex.AnalizadorLexicoTiny;
 import alex.UnidadLexica;
-import alex.TokenValue;
 import errors.GestionErroresTiny;
-import ast.*;
-import java.util.LinkedList;
 
 scan with {: return getScanner().next_token(); :};
-//action code {:
-//   ... add some code to declare and initialize e.g. variables used by the code embedded in the grammar
-//:};
 parser code {: 
    private GestionErroresTiny errores;
    public void syntax_error(Symbol unidadLexica) {
@@ -25,71 +19,42 @@ init with {:
 :};
 
 
-terminal IF, ELSE, TIPO_ENT, TRUE, FALSE, TIPO_BOOL, MAS, IGUAL, IGUALIGUAL, MAYOR, PAP, PCIERRE, CAP, CCIERRE, PUNTOCOMA;
-terminal TokenValue IDEN, ENT;
+terminal IDEN,
+         IF, ELSE, ELIF, FOR, WHILE, FUNC, RET,
+         ENT, FLOAT,
+         PRIV, PROT, PUB, CLASS,
+         TRUE, FALSE,
+         MAS, MENOS, MULTI, DIV,
+         TIPO_ENT, TIPO_BOOL, TIPO_FLOAT,
+         IGUAL, IGUALIGUAL, DISTINTO, PLUSPLUS, MENOSMENOS, MENOR, MAYOR, MENORI, MAYORI, PUNTOCOMA,COMA,
+         PAP, PCIERRE, CAP, CCIERRE, LAP, LCIERRE;
 
 
-non terminal  LinkedList<Instruccion> P, LInst, ElseCase;
-non terminal Instruccion Inst, Cond, Asig, Decl;
-non terminal E E0, E1, E2, E3;
+non terminal  P, LInst, Inst, Cond, ElseCase, ElifCase, Asig, Decl, DeclVal , Bucle , Function, Types,
+              LParameters, Parametros, Retorno, Op1, Increment, OpBool, E0, E1, E2, E3, E4;
 
 
-P       ::= LInst: l
-            {: RESULT = l; :};
-            
-LInst   ::= Inst: inst LInst: l
-            {: l.addFirst(inst);
-               RESULT = l;
-            :}; 
-LInst   ::=  
-            {: RESULT = new LinkedList(); :};
-            
-Inst    ::= Cond: inst
-            {: RESULT = inst; :}; 
-Inst    ::= Asig: inst
-            {: RESULT = inst; :};  
-Inst    ::= Decl: inst
-            {: RESULT = inst; :};           
-
-Asig    ::= IDEN: id IGUAL E0: exp PUNTOCOMA
-            {: RESULT = new Asignacion(id.lexema, exp); :};
-            
-Decl    ::= TIPO_ENT IDEN: id PUNTOCOMA
-            {: RESULT = new Declaracion(Type.NUM, id.lexema); :};
-            
-Decl    ::= TIPO_BOOL IDEN: id PUNTOCOMA
-            {: RESULT = new Declaracion(Type.BOOL, id.lexema); :};
-            
-Cond    ::= IF PAP E0: exp PCIERRE CAP LInst: inst_if CCIERRE ElseCase: inst_else
-            {: RESULT = new Condicional(exp, inst_if, inst_else); :};
-ElseCase::= ELSE CAP LInst: l CCIERRE
-            {: RESULT = l; :};
-            
-            
-E0      ::= E0: op1 MAS E1: op2
-            {: RESULT = new EBin(BinOps.MAS, op1, op2); :};  
-E0      ::= E1: exp
-            {: RESULT = exp; :};
-            
-E1      ::= E1: op1 MAYOR E2: op2
-            {: RESULT = new EBin(BinOps.MAYOR, op1, op2); :};  
-E1      ::= E2: exp
-            {: RESULT = exp; :};
-
-E2      ::= E2: op1 IGUALIGUAL E3: op2
-            {: RESULT = new EBin(BinOps.IGUAL, op1, op2); :};  
-E2      ::= E3: exp
-            {: RESULT = exp; :};
-
-E3      ::= ENT: value
-            {: RESULT = new Num(value.lexema); :}; 
-E3      ::= TRUE
-            {: RESULT = new BoolValue("true"); :};
-E3      ::= FALSE 
-            {: RESULT = new BoolValue("false"); :};
-E3      ::= IDEN : id
-            {: RESULT = new Identificador(id.lexema); :}; 
-E3      ::= PAP E0: exp PCIERRE  
-            {: RESULT = exp; :}; 
+P       ::= LInst;
+LInst   ::= Inst LInst | ;
+Inst    ::= Cond | Asig | Decl PUNTOCOMA | Bucle | Function | DeclVal PUNTOCOMA| Op1 PUNTOCOMA | Retorno PUNTOCOMA;
+Asig    ::= IDEN IGUAL E0 PUNTOCOMA;
+Decl    ::= Types IDEN;
+DeclVal ::= Types IDEN IGUAL E0 ;
+Cond    ::= IF PAP E0 PCIERRE LAP LInst LCIERRE ElifCase ElseCase;
+Op1     ::= IDEN PLUSPLUS | IDEN MENOSMENOS;
+Bucle   ::= FOR PAP DeclVal PUNTOCOMA E0 PUNTOCOMA Increment PCIERRE LAP LInst LCIERRE | WHILE PAP E0 PCIERRE LAP LInst LCIERRE ;
+Increment ::= Op1 | E0;
+ElseCase  ::= ELSE LAP LInst LCIERRE | ;
+ElifCase  ::= ELIF PAP E0 PCIERRE LAP LInst LCIERRE ElifCase | ;
+Function ::= FUNC Types IDEN PAP Parametros PCIERRE LAP LInst LCIERRE;
+Types ::= TIPO_ENT | TIPO_BOOL | TIPO_FLOAT;
+Retorno ::= RET E0 | RET;
+Parametros ::= Decl LParameters | ;
+LParameters ::= COMA Decl LParameters | ;
+OpBool ::= IGUALIGUAL | DISTINTO | MENOR | MAYOR | MENORI | MAYORI;
+E0  ::= E1 OpBool E1 | E1;
+E1  ::= E1 MAS E2  | E1 MENOS E2 | E2;
+E2  ::= E2 MULTI E3 | E2 DIV E3 | E3;
+E3  ::= ENT  | TRUE  | FALSE | IDEN | PAP E0 PCIERRE | FLOAT ;
 
 

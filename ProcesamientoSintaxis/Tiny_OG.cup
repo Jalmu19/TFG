@@ -84,12 +84,9 @@ E2      ::= E3: exp
 E3      ::= ENT: value
             {: RESULT = new Num(value.lexema); :}; 
 E3      ::= TRUE
-            {: 
-            RESULT = new BoolValue("true"); :};
+            {: RESULT = new BoolValue("true"); :};
 E3      ::= FALSE 
-            {: 
-            RESULT = new BoolValue("false"); 
-            :};
+            {: RESULT = new BoolValue("false"); :};
 E3      ::= IDEN : id
             {: RESULT = new Identificador(id.lexema); :}; 
 E3      ::= PAP E0: exp PCIERRE  
